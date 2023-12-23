@@ -52,13 +52,13 @@ export async function POST(request) {
         isThala = true
       } else {
         // None of condition's match. NOT a THALA
-        
+
         reason = thalaValueInSplit.join(' + ') + " = " + thalaValueInSplit.length
       }
     }
 
     return Response.json({ reason, isThala })
   } catch (error) {
-    return new Response('Unknown Error' + error, { status: 400 })
+    return Response.json({"error": 'Unknown Error: ' + error}, { status: 400 })
   }
 }
