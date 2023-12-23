@@ -24,6 +24,14 @@ export async function POST(request) {
       }
       if (finalSum === 7) {
         isThala = true
+      } else if(finalSum===0 && numberInThala.length===1) {
+        finalSum = Number(numberInThala[0])
+        if (finalSum===7){
+          isThala = true
+          reason = finalSum + " = 7"
+        } else {
+          reason = finalSum + " != 7"
+        }
       }
     } else if (thalaValue.split('').includes('+') || thalaValue.split('').includes('-')) {
       // Received Expression from user
