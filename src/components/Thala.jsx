@@ -112,7 +112,7 @@ const Thala = () => {
       )}
 
       {/* {isThala? audio.play():reason} */}
-      {showGif ? <Image src={gifUrl} width="0" height="0" style={{ width: '500px', height: '50' }} alt={gifUrl} /> : ""}
+      {showGif ? <Image src={gifUrl} width="0" height="0" style={{ width: '500px', height: '500px' }} alt={gifUrl} /> : ""}
     </div>
   )
 }
